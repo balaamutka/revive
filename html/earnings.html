@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings - Revive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/earnings.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <a href="index.html" class="logo">Revive</a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="crafter_dashboard.html" class="nav-link"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg> Dashboard</a></li>
+            <li class="nav-item"><a href="chat.html" class="nav-link"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> Messages</a></li>
+            <li class="nav-item"><a href="orders.html" class="nav-link"><svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V19z"/></svg> Orders</a></li>
+            <li class="nav-item"><a href="master.html" class="nav-link"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> Portfolio</a></li>
+            <li class="nav-item"><a href="earnings.html" class="nav-link active"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg> Earnings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100" class="mini-avatar">
+            <div class="user-info-mini"><h4>Alexander K.</h4><span>Crafter</span></div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="top-bar">
+            <h1 class="page-title">Earnings & Payouts</h1>
+            <button class="btn-green" onclick="openSettingsModal()">Payout Settings</button>
+        </div>
+        
+        <div class="dashboard-layout">
+            <div class="content-card">
+                <div class="card-header"><h3 class="card-title">Transaction History</h3></div>
+                
+                <div class="transaction-item">
+                    <div class="t-info"><h5>Payment for Denim Jacket</h5><span>Nov 24, 14:30 • from Maria K.</span></div>
+                    <div class="t-amount">+$120.00</div>
+                </div>
+                <div class="transaction-item">
+                    <div class="t-info"><h5>Payment for Shopper</h5><span>Nov 20, 09:15 • from Irene D.</span></div>
+                    <div class="t-amount">+$45.00</div>
+                </div>
+                <div class="transaction-item">
+                    <div class="t-info"><h5>Payment for Repair</h5><span>Nov 18, 11:00 • from Max R.</span></div>
+                    <div class="t-amount">+$30.00</div>
+                </div>
+                <div class="transaction-item">
+                    <div class="t-info"><h5>Withdrawal to Bank Card</h5><span>Nov 15, 10:00 • Processed</span></div>
+                    <div class="t-amount" style="color:var(--text-grey)">-$200.00</div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header"><h3 class="card-title">Your Balance</h3></div>
+                <div class="balance-display">
+                    <span style="font-size:14px; color:#888;">Available to withdraw</span>
+                    <div class="balance-amount">$395.00</div>
+                    <button class="btn-create" style="width:100%; margin-top:10px;" onclick="openWithdrawModal()">Withdraw Funds</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="withdrawModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Withdraw Funds</h2>
+            
+            <div class="form-group">
+                <label>Amount to Withdraw ($)</label>
+                <input type="number" id="withdrawAmount" value="395.00">
+            </div>
+
+            <div class="form-group">
+                <label>To Card / Account</label>
+                <select>
+                    <option>Visa ending in 4455 (Primary)</option>
+                    <option>PayPal (alex@revive.com)</option>
+                </select>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModal('withdrawModal')">Cancel</button>
+                <button class="btn-save" onclick="confirmWithdraw()">Confirm Withdrawal</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Payment Details</h2>
+            <p style="color:#666; font-size:13px; margin-bottom:20px;">Enter valid bank details for payouts.</p>
+            
+            <div class="form-group">
+                <label>Bank Name</label>
+                <input type="text" id="setting-bank" placeholder="e.g. Monobank / PrivatBank">
+            </div>
+            <div class="form-group">
+                <label>IBAN / Card Number</label>
+                <input type="text" id="setting-iban" placeholder="UA00000000... or 16 digits">
+            </div>
+            <div class="form-group">
+                <label>Cardholder Name</label>
+                <input type="text" id="setting-name" placeholder="First Last Name (Latin)">
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="closeModal('settingsModal')">Cancel</button>
+                <button class="btn-save" onclick="saveSettings()">Save Details</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/users-data.js"></script>
+    <script src="../js/auth-system.js"></script>
+    <script src="../js/earnings.js"></script>
+</body>
+</html>

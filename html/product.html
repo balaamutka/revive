@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Revive Project</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+<!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <div class="site-name">Revive</div>
+            <div class="nav-links">
+                <a href="../html/home.html">Home</a>
+                <a href="../html/catalog.html">Catalog</a>
+                <a href="../html/about_us.html">About us</a>
+                <a href="../html/redesign.html">Redesign</a>
+            </div>
+        </div>
+        
+        <!-- Auth Buttons (shown when user is NOT logged in) -->
+        <div class="nav-buttons" id="navAuth">
+            <a href="../html/signin.html" class="sign-in">Sign In</a>
+            <a href="../html/signup.html" class="sign-up">Sign Up</a>
+        </div>
+        
+        <!-- User Profile (shown when user IS logged in) -->
+        <div class="user-profile-nav" id="userProfile" style="display: none;">
+            <div class="profile-toggle">
+                <img src="" alt="Profile" class="profile-img" id="navProfileImg">
+                <span class="profile-name" id="navProfileName"></span>
+                <span class="dropdown-arrow">▼</span>
+            </div>
+            <div class="profile-dropdown">
+                <a href="../html/profile.html" class="dropdown-item">My Profile</a>
+                <a href="../html/settings.html" class="dropdown-item">Settings</a>
+                <a href="../html/wishlist.html" class="dropdown-item">Wishlist</a>
+                <a href="../html/chat.html" class="dropdown-item">Chat</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item logout-btn" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-details" id="productDetails">
+                <!-- Продукт буде завантажений через JavaScript -->
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <button class="tab-header active" data-tab="description">Description</button>
+                    <button class="tab-header" data-tab="details">Details</button>
+                    <button class="tab-header" data-tab="reviews">Reviews</button>
+                    <button class="tab-header" data-tab="shipping">Shipping</button>
+                    <button class="tab-header" data-tab="creator">About Creator</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>About This Product</h3>
+                        <p id="productFullDescription">Our Revived Denim Jacket represents the heart of what we do at Revive Project. Each jacket is carefully selected from vintage collections and transformed into a unique piece of wearable art.</p>
+                        <p>The embroidery patterns are inspired by nature and traditional craftsmanship, making each jacket a story of sustainability and creativity.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="details">
+                        <h3>Product Details</h3>
+                        <ul id="productDetailsList">
+                            <!-- Деталі будуть додані через JavaScript -->
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">Sarah M.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <p>"Absolutely love my revived jacket! The quality is amazing and I get compliments everywhere I go."</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">John D.</div>
+                                <div class="review-stars">★★★★☆</div>
+                            </div>
+                            <p>"Great fit and the embroidery is beautiful. Love supporting sustainable fashion!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping & Returns</h3>
+                        <p><strong>Free shipping</strong> on orders over $50. Standard delivery: 3-5 business days.</p>
+                        <p><strong>Returns:</strong> Easy 30-day return policy. Items must be in original condition.</p>
+                    </div>
+                    <div class="tab-pane" id="creator">
+                        <div id="creatorInfo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Revive Project</h3>
+      <p>Bringing new life to discarded fabrics through creativity and care.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="../html/home.html">Home</a></li>
+        <li><a href="../html/catalog.html">Catalog</a></li>
+        <li><a href="../html/about_us.html">About Us</a></li>
+        <li><a href="../html/profile.html">Profile</a></li>
+        <li><a href="../html/redesign.html">Redesign</a></li>
+        <li><a href="../html/explore.html">Explore</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Revive Project. All rights reserved.</p>
+  </div>
+</footer>
+
+    <!-- Підключаємо спочатку дані, потім функціонал -->
+    <script src="../js/products-data.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/users-data.js"></script>
+    <script src="../js/auth-system.js"></script>
+</body>
+</html>

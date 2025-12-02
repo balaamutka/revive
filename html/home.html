@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revive Project</title>
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+      <div class="nav-left">
+          <div class="site-name">Revive</div>
+          <div class="nav-links">
+              <a href="../html/catalog.html">Catalog</a>
+              <a href="../html/about_us.html">About us</a>
+              <a href="../html/redesign.html">Redesign</a>
+          </div>
+      </div>
+      
+      <!-- Auth Buttons (shown when user is NOT logged in) -->
+      <div class="nav-buttons" id="navAuth">
+          <a href="../html/signin.html" class="sign-in">Sign In</a>
+          <a href="../html/signup.html" class="sign-up">Sign Up</a>
+      </div>
+      
+      <!-- User Profile (shown when user IS logged in) -->
+      <div class="user-profile-nav" id="userProfile" style="display: none;">
+          <div class="profile-toggle">
+              <img src="" alt="Profile" class="profile-img" id="navProfileImg">
+              <span class="profile-name" id="navProfileName"></span>
+              <span class="dropdown-arrow">▼</span>
+          </div>
+          <div class="profile-dropdown">
+              <a href="../html/profile.html" class="dropdown-item">My Profile</a>
+              <a href="../html/edit_profile.html" class="dropdown-item">Settings</a>
+              <a href="../html/wishlist.html" class="dropdown-item">Wishlist</a>
+              <a href="../html/chat.html" class="dropdown-item">Chat</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout-btn" onclick="logout()">Logout</a>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+
+    <div class="hero-text">
+      <h1>Welcome to Revive Project</h1>
+      <p>Discover how we bring new life to discarded fabrics through creativity and care.</p>
+      <a href="../html/catalog.html" class="cta-button">Explore Our Collection</a>
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <!-- Statistics -->
+  <div class="stats">
+    <div class="stat-item">
+      <h2>10k+</h2>
+      <p>revived clothes</p>
+    </div>
+    <div class="stat-item">
+      <h2>1.5</h2>
+      <p>years on market</p>
+    </div>
+    <div class="stat-item">
+      <h2>5k+</h2>
+      <p>satisfied customers</p>
+    </div>
+    <div class="stat-item">
+      <h2>10+</h2>
+      <p>partnering cafés & showrooms</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-left">
+          <h2>About Revive Project</h2>
+        </div>
+        <div class="about-right">
+          <p>The Revive Project focuses on recycling used clothes and excess fabrics to give them a second life. Our mission is to minimize textile waste and inspire sustainable fashion habits within local communities.</p>
+          <p>By collecting, reworking, and creatively transforming materials, we bring new value to what was once discarded — combining design, environmental awareness, and social responsibility in every product we create.</p>
+          <a href="../html/about_us.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Carousel Section -->
+  <div class="products-section">
+    <div class="carousel-container">
+      <h2>Our Products</h2>
+      <div class="products-carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Продукти будуть додані через JavaScript -->
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <div class="carousel-dots" id="carouselDots">
+          <!-- Крапки будуть додані через JavaScript -->
+        </div>
+        <button class="carousel-btn next-btn">&#10095;</button>
+      </div>
+        <div class="catalog-link">
+          <a href="../html/catalog.html" class="catalog-btn">To Catalog</a>
+        </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Revive Project</h3>
+      <p>Bringing new life to discarded fabrics through creativity and care.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="../html/home.html">Home</a></li>
+        <li><a href="../html/catalog.html">Catalog</a></li>
+        <li><a href="../html/about_us.html">About Us</a></li>
+        <li><a href="../html/profile.html">Profile</a></li>
+        <li><a href="../html/redesign.html">Redesign</a></li>
+        <li><a href="../html/explore.html">Explore</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Revive Project. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/users-data.js"></script>
+  <script src="../js/auth-system.js"></script>
+
+</body>
+</html>

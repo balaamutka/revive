@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - Revive Project</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <nav>
+      <div class="nav-left">
+          <div class="site-name">Revive</div>
+          <div class="nav-links">
+              <a href="../html/catalog.html">Catalog</a>
+              <a href="../html/about_us.html">About us</a>
+              <a href="../html/redesign.html">Redesign</a>
+          </div>
+      </div>
+      
+      <div class="nav-buttons" id="navAuth">
+          <a href="../html/signin.html" class="sign-in">Sign In</a>
+          <a href="../html/signup.html" class="sign-up">Sign Up</a>
+      </div>
+      
+      <div class="user-profile-nav" id="userProfile" style="display: none;">
+          <div class="profile-toggle">
+              <img src="" alt="Profile" class="profile-img-nav" id="navProfileImg">
+              <span class="profile-name" id="navProfileName"></span>
+              <span class="dropdown-arrow">▼</span>
+          </div>
+          <div class="profile-dropdown">
+              <a href="../html/profile.html" class="dropdown-item">My Profile</a>
+              <a href="../html/edit_profile.html" class="dropdown-item">Settings</a>
+              <a href="../html/wishlist.html" class="dropdown-item">Wishlist</a>
+              <a href="../html/chat.html" class="dropdown-item">Chat</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout-btn" onclick="logout()">Logout</a>
+          </div>
+      </div>
+  </nav>
+
+    <div id="profileContent" style="min-height: 60vh;"></div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Revive Project</h3>
+          <p>Bringing new life to discarded fabrics through creativity and care.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../html/home.html">Home</a></li>
+            <li><a href="../html/catalog.html">Catalog</a></li>
+            <li><a href="../html/about_us.html">About Us</a></li>
+            <li><a href="../html/profile.html">Profile</a></li>
+            <li><a href="../html/redesign.html">Redesign</a></li>
+            <li><a href="../html/explore.html">Explore</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Revive Project. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/users-data.js"></script>
+    <script src="../js/auth-system.js"></script>
+    
+    <script src="../js/profile.js"></script>
+</body>
+</html>

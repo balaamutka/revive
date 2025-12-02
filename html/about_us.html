@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Revive — About Us</title>
+  <link rel="stylesheet" href="../css/about_us.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+  <nav>
+      <div class="nav-left">
+          <div class="site-name">Revive</div>
+          <div class="nav-links">
+              <a href="../html/home.html">Home</a>
+              <a href="../html/catalog.html">Catalog</a>
+              <a href="../html/redesign.html">Redesign</a>
+          </div>
+      </div>
+      
+      <!-- Auth Buttons (shown when user is NOT logged in) -->
+      <div class="nav-buttons" id="navAuth">
+          <a href="../html/signin.html" class="sign-in">Sign In</a>
+          <a href="../html/signup.html" class="sign-up">Sign Up</a>
+      </div>
+      
+      <!-- User Profile (shown when user IS logged in) -->
+      <div class="user-profile-nav" id="userProfile" style="display: none;">
+          <div class="profile-toggle">
+              <img src="" alt="Profile" class="profile-img" id="navProfileImg">
+              <span class="profile-name" id="navProfileName"></span>
+              <span class="dropdown-arrow">▼</span>
+          </div>
+          <div class="profile-dropdown">
+              <a href="../html/profile.html" class="dropdown-item">My Profile</a>
+              <a href="../html/settings.html" class="dropdown-item">Settings</a>
+              <a href="../html/wishlist.html" class="dropdown-item">Wishlist</a>
+              <a href="../html/chat.html" class="dropdown-item">Chat</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout-btn" onclick="logout()">Logout</a>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-left">
+        <h1 class="hero-head">About Revive Project</h1>
+        <p class="hero-sub">The Revive Project focuses on recycling used clothes and excess fabrics to give them a second life. Our mission is to minimize textile waste and inspire sustainable fashion habits within local communities.</p>
+        <p class="hero-sub">By collecting, reworking, and creatively transforming materials, we bring new value to what was once discarded — combining design, environmental awareness and social responsibility in every product we create.</p>
+        
+        <div class="hero-cta">
+          <a class="btn-primary" href="../html/redesign.html">Start Your Design</a>
+        </div>
+      </div>
+
+      <div class="hero-right" role="img" aria-label="Revive Project - Sustainable Fashion">
+        <img src="../pictures/about_us.jpg" alt="Revive Project" class="hero-image">
+      </div>
+    </div>
+
+    <section class="statement" id="mission">
+      <h2>Our Mission</h2>
+      <p>We believe fashion can live longer, be more gentle, and truly reflect your personality. Items with history are the most valuable. Rather than creating new to forget the old, we restore, reimagine, and build a bridge between the maker's hand and your personal choice. Our aim is to lower textile waste through mindful design and craftsmanship that honors both material and memory.</p>
+    </section>
+
+    <section class="grid-3" id="process">
+      <article class="text-block">
+        <h3>Collection & Sorting</h3>
+        <p>We partner with local communities, thrift stores, and textile manufacturers to collect discarded fabrics and clothing. Each item is carefully sorted based on material quality, condition, and potential for transformation.</p>
+      </article>
+
+      <article class="text-block">
+        <h3>Creative Transformation</h3>
+        <p>Our team of designers and artisans reworks materials using techniques like patchworking, embroidery, and reconstruction. We combine traditional craftsmanship with contemporary design to create unique, one-of-a-kind pieces.</p>
+      </article>
+
+      <article class="text-block">
+        <h3>Sustainable Distribution</h3>
+        <p>Through our network of partnering cafés and showrooms, we make sustainable fashion accessible. We also host workshops to educate communities about textile waste and upcycling techniques.</p>
+      </article>
+    </section>
+  </div>
+
+<div class="impact-stats">
+    <div class="container">
+        <h2>Our Impact in Numbers</h2>
+        <p class="section-subtitle">See the difference we’re making together for our planet</p>
+        
+        <div class="stats-divider"></div>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>CO₂ Saved</h3>
+                <p class="stat-number" data-target="12750">12,750</p>
+                <p class="stat-unit">kilograms</p>
+                <p class="stat-description">That’s equivalent to planting over 500 trees!</p>
+            </div>
+
+            <div class="stat-item">
+                <h3>Clothes Revived</h3>
+                <p class="stat-number" data-target="8450">8,450</p>
+                <p class="stat-unit">items</p>
+                <p class="stat-description">Given new life instead of ending up in landfills</p>
+            </div>
+
+            <div class="stat-item">
+                <h3>Cloth Wastege Used</h3>
+                <p class="stat-number" data-target="8450">1,034</p>
+                <p class="stat-unit">kilograms</p>
+                <p class="stat-description">Given a chance to become an actual clothes</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- how it works -->
+<div class="howitworks">
+    <h1>From Old to Gold</h1>
+    <p>We’ve made the process of upcycling as simple as online shopping. Here is how your clothes get a second life.</p>
+</div>
+
+<div class="container">
+    
+    <div class="steps-container">
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Upload & Describe</h3>
+            <p class="step-desc">Take photos of your clothes. Describe your idea or choose a reference from our catalog.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Connect with Master</h3>
+            <p class="step-desc">Chat with a crafter, agree on the design, price, and deadline directly.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Ship for Free</h3>
+            <p class="step-desc">We generate a shipping label. Pack your items and drop them off at the nearest post office.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Receive & Wear</h3>
+            <p class="step-desc">Get your unique, professionally upcycled piece delivered back to your door.</p>
+        </div>
+    </div>
+
+    <section class="guide-section">
+        <div class="guide-text">
+            <h2>Perfect Fit Guarantee</h2>
+            <p>To ensure your redesigned item fits perfectly, we recommend taking fresh measurements. It takes only 2 minutes.</p>
+            <ul class="guide-list">
+                <li><span>1. Bust:</span> Measure around the fullest part of your chest.</li>
+                <li><span>2. Waist:</span> Measure around the narrowest part of your waistline.</li>
+                <li><span>3. Hips:</span> Measure around the fullest part of your hips.</li>
+                <li><span>4. Inseam:</span> For pants, measure from the crotch to the bottom.</li>
+            </ul>
+            
+            <a href="guide.pdf" download="Revive_Measurement_Guide" style="color:var(--blue); font-weight:600; text-decoration:none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;">
+                <span style="font-size: 20px;">⬇</span> Download PDF Guide
+            </a>
+
+        </div>
+        <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=800&auto=format&fit=crop" class="guide-img" alt="Measuring Guide">
+    </section>
+  <section class="faq-section">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-columns">
+          <div class="faq-column">
+              <details>
+                  <summary>Who pays for shipping?</summary>
+                  <div class="faq-content">
+                      Shipping your old clothes to the crafter is covered by us! You only pay for the return shipping of the finished product, which is included in the final price.
+                  </div>
+              </details>
+
+              <details>
+                  <summary>What if I don't like the result?</summary>
+                  <div class="faq-content">
+                      We have a satisfaction guarantee. If the item differs significantly from the agreed sketch, the crafter will rework it for free.
+                  </div>
+              </details>
+          </div>
+          
+          <div class="faq-column">
+              <details>
+                  <summary>How long does it take?</summary>
+                  <div class="faq-content">
+                      It depends on the complexity. Usually, simple repairs take 3-5 days, while complex redesigns (like corsets or patchwork jackets) take 10-14 days.
+                  </div>
+              </details>
+
+              <details>
+                  <summary>Can I cancel my order?</summary>
+                  <div class="faq-content">
+                      You can cancel anytime before shipping your materials. Once the crafter has started working, a partial refund is possible depending on the stage of work.
+                  </div>
+              </details>
+          </div>
+      </div>
+  </section>
+</div>
+
+  <div class="cta-banner">
+      <h2>Ready to start your project?</h2>
+      <p>Join thousands of people making fashion sustainable.</p>
+      <a href="chat.html" class="cta-btn">Start Redesign</a>
+  </div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Revive Project</h3>
+      <p>Bringing new life to discarded fabrics through creativity and care.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="../html/home.html">Home</a></li>
+        <li><a href="../html/catalog.html">Catalog</a></li>
+        <li><a href="../html/about_us.html">About Us</a></li>
+        <li><a href="../html/profile.html">Profile</a></li>
+        <li><a href="../html/redesign.html">Redesign</a></li>
+        <li><a href="../html/explore.html">Explore</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Revive Project. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../js/users-data.js"></script>
+<script src="../js/auth-system.js"></script>
+</body>
+</html>

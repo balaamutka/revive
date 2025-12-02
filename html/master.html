@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revive Project - Crafter Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+<body>
+<nav>
+        <div class="nav-left">
+            <div class="site-name">Revive</div>
+            <div class="nav-links">
+                <a href="../html/home.html">Home</a>
+                <a href="../html/catalog.html">Catalog</a>
+                <a href="../html/about_us.html">About us</a>
+                <a href="../html/redesign.html">Redesign</a>
+            </div>
+        </div>
+        
+        <div class="nav-buttons" id="navAuth">
+            <a href="../html/signin.html" class="sign-in">Sign In</a>
+            <a href="../html/signup.html" class="sign-up">Sign Up</a>
+        </div>
+        
+        <div class="user-profile-nav" id="userProfile" style="display: none;">
+            <div class="profile-toggle">
+                <img src="" alt="Profile" class="profile-img" id="navProfileImg">
+                <span class="profile-name" id="navProfileName"></span>
+                <span class="dropdown-arrow">▼</span>
+            </div>
+            <div class="profile-dropdown">
+                <a href="../html/profile.html" class="dropdown-item">My Profile</a>
+                <a href="../html/settings.html" class="dropdown-item">Settings</a>
+                <a href="../html/wishlist.html" class="dropdown-item">Wishlist</a>
+                <a href="../html/chat.html" class="dropdown-item">Chat</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item logout-btn" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-card">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" class="crafter-photo-large">
+            
+            <div class="crafter-info">
+                <div class="crafter-tags"><span class="tag">Upcycling</span><span class="tag">Denim</span></div>
+                <h1 class="crafter-name">Alexander Kovalchuk</h1>
+                <div class="rating-block"><span class="stars">★★★★★</span> <span>4.9 (185 orders)</span></div>
+                
+                <p class="crafter-bio">
+                    Hi! I specialize in giving a second life to denim items. 
+                    My philosophy is "don't throw away, reimagine". I believe every item has a story worth continuing. 
+                    I love complex tasks involving patchwork and hand embroidery. Let's turn your old jacket into a work of art!
+                </p>
+
+                <div class="contacts-section">
+                    <span class="contact-label">Contact me:</span>
+                    <div class="contact-links">
+                        <a href="#" class="social-link" title="Instagram">
+                            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" title="Telegram">
+                            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+                        </a>
+                        <a href="mailto:alex@revive.com" class="social-link" title="Email">
+                            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="../html/chat.html" class="btn btn-primary">Message Crafter</a>
+                    <button class="btn btn-outline" id="subBtn" onclick="toggleSubscribe()">Subscribe</button>
+                    <button class="btn-icon" id="likeBtn" onclick="toggleLike()" title="Add to Favorites">♥</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('portfolio')">Portfolio</button>
+            <button class="tab-btn" onclick="openTab('reviews')">Reviews (185)</button>
+            <button class="tab-btn" onclick="openTab('terms')">Terms & Conditions</button>
+        </div>
+
+       <div id="portfolio" class="section-content active">
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-item" onclick="openProject(1)">
+                    <img src="../master_photo/photo_2025-11-25_21-20-13.jpg" class="portfolio-img">
+                    <div class="portfolio-overlay"><span class="view-btn">View Details</span></div>
+                    <div class="portfolio-details">
+                        <div class="portfolio-title">Denim Jacket "Patch"</div>
+                        <div class="portfolio-meta"><span>Upcycled Denim</span><span>$120</span></div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="openProject(2)">
+                    <img src="../master_photo/photo_2025-11-29_18-03-15.jpg" class="portfolio-img">
+                    <div class="portfolio-overlay"><span class="view-btn">View Details</span></div>
+                    <div class="portfolio-details">
+                        <div class="portfolio-title">Shirt Corset</div>
+                        <div class="portfolio-meta"><span>Vintage Cotton</span><span>$85</span></div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" onclick="openProject(3)">
+                    <img src="../master_photo/photo_2025-11-29_19-15-33.jpg" class="portfolio-img">
+                    <div class="portfolio-overlay"><span class="view-btn">View Details</span></div>
+                    <div class="portfolio-details">
+                        <div class="portfolio-title">Shopper Bag</div>
+                        <div class="portfolio-meta"><span>Mixed Fabric</span><span>$45</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="reviews" class="section-content">
+            <div class="review-item">
+                <div class="review-header"><span class="reviewer-name">Maria K. <span class="stars">★★★★★</span></span><span class="review-date">Nov 12, 2024</span></div>
+                <p class="review-text">This is just wow! Alexander made an incredibly cool skirt from my old jeans. The sewing quality is perfect.</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header"><span class="reviewer-name">Oleg P. <span class="stars">★★★★★</span></span><span class="review-date">Oct 05, 2024</span></div>
+                <p class="review-text">Great communication, the master quickly understood the idea and even improved it.</p>
+            </div>
+        </div>
+
+        <div id="terms" class="section-content">
+            <div class="terms-grid">
+                <div class="term-card"><div class="term-title">💰 Cost & Payment</div><p class="term-desc">Minimum order is $30. I work on a scheme: 20% deposit after sketch approval.</p></div>
+                <div class="term-card"><div class="term-title">⏳ Timing</div><p class="term-desc">Average time: 7-14 days. Urgent orders (+30% fee) are done in 3-4 days.</p></div>
+                <div class="term-card"><div class="term-title">📦 Materials</div><p class="term-desc">I accept only washed and clean clothes. Denim, cotton, linen. I do not work with natural fur.</p></div>
+                <div class="term-card"><div class="term-title">🛡️ Warranty</div><p class="term-desc">Free rework if the size doesn't fit due to my error.</p></div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Revive Project</h3>
+      <p>Bringing new life to discarded fabrics through creativity and care.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="../html/home.html">Home</a></li>
+        <li><a href="../html/catalog.html">Catalog</a></li>
+        <li><a href="../html/about_us.html">About Us</a></li>
+        <li><a href="../html/profile.html">Profile</a></li>
+        <li><a href="../html/redesign.html">Redesign</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Revive Project. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="projectModal" class="modal-overlay" onclick="closeProject(event)">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeProject(event, true)">&times;</span>
+        
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img id="m-img" src="" alt="Project Image">
+                <div class="modal-price-tag" id="m-price">$0</div>
+            </div>
+
+            <div class="modal-info">
+                <h2 id="m-title" class="modal-title">Project Title</h2>
+                <p id="m-desc" class="modal-description">Description goes here...</p>
+
+                <div class="modal-divider"></div>
+
+                <div class="client-feedback">
+                    <div class="client-header">
+                        <img id="m-c-avatar" src="" alt="Client" class="client-avatar">
+                        <div>
+                            <span class="client-label">Client review:</span>
+                            <h4 id="m-c-name" class="client-name">Name</h4>
+                        </div>
+                    </div>
+                    <p id="m-c-review" class="client-review-text">"Review text..."</p>
+                </div>
+
+                <button class="modal-action-btn" onclick="window.location.href='../html/chat.html'">I want something similar!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="../js/users-data.js"></script>
+  <script src="../js/products-data.js"></script>
+  <script src="../js/auth-system.js"></script>
+  <script src="../js/master.js"></script>
+</body>
+</html>

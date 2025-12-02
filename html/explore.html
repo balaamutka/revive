@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revive Project - Explore</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/explore.css">
+</head>
+<body>
+<!-- Navigation -->
+  <nav>
+      <div class="nav-left">
+          <div class="site-name">Revive</div>
+          <div class="nav-links">
+              <a href="../html/home.html">Home</a>
+              <a href="../html/catalog.html">Catalog</a>
+              <a href="../html/redesign.html">Redesign</a>
+          </div>
+      </div>
+      
+      <!-- Auth Buttons (shown when user is NOT logged in) -->
+      <div class="nav-buttons" id="navAuth">
+          <a href="../html/signin.html" class="sign-in">Sign In</a>
+          <a href="../html/signup.html" class="sign-up">Sign Up</a>
+      </div>
+      
+      <!-- User Profile (shown when user IS logged in) -->
+      <div class="user-profile-nav" id="userProfile" style="display: none;">
+          <div class="profile-toggle">
+              <img src="" alt="Profile" class="profile-img" id="navProfileImg">
+              <span class="profile-name" id="navProfileName"></span>
+              <span class="dropdown-arrow">▼</span>
+          </div>
+          <div class="profile-dropdown">
+              <a href="../html/profile.html" class="dropdown-item">My Profile</a>
+              <a href="../html/settings.html" class="dropdown-item">Settings</a>
+              <a href="../html/wishlist.html" class="dropdown-item">Wishlist</a>
+              <a href="../html/chat.html" class="dropdown-item">Chat</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout-btn" onclick="logout()">Logout</a>
+          </div>
+      </div>
+  </nav>
+
+    <div class="explore-header">
+        <h1 class="explore-title">Get Inspired</h1>
+        <p class="explore-subtitle">Discover unique upcycled creations from our community of masters.</p>
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterGrid('all')">All</button>
+        <button class="filter-btn" onclick="filterGrid('denim')">Denim</button>
+        <button class="filter-btn" onclick="filterGrid('patchwork')">Patchwork</button>
+        <button class="filter-btn" onclick="filterGrid('accessories')">Accessories</button>
+        <button class="filter-btn" onclick="filterGrid('vintage')">Vintage</button>
+    </div>
+
+    <div class="masonry-container" id="masonryGrid">
+        </div>
+
+    <div id="exploreModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-card">
+            <div class="m-img-col">
+                <img id="modalImg" src="" class="m-img">
+            </div>
+            <div class="m-info-col">
+                <button class="close-btn" onclick="closeModal(event, true)">×</button>
+                
+                <div>
+                    <span id="modalTag" class="m-tag">Category</span>
+                    <h2 id="modalTitle" class="m-title">Title</h2>
+                    <p id="modalDesc" class="m-desc">Description goes here...</p>
+                </div>
+
+                <div class="m-crafter">
+                    <img id="modalAvatar" src="" class="m-c-avatar">
+                    <div>
+                        <div id="modalCrafter" class="m-c-name">Crafter Name</div>
+                        <div class="m-c-role">Revive Master</div>
+                    </div>
+                    <a href="profile.html" style="margin-left: auto; color: var(--blue); text-decoration: none; font-size: 13px; font-weight: 600;">View Profile</a>
+                </div>
+
+                <div class="m-actions">
+                    <button class="btn-buy" onclick="window.location.href='chat.html'">I want this!</button>
+                    <button class="btn-save">♥</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Revive Project</h3>
+      <p>Bringing new life to discarded fabrics through creativity and care.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="../html/home.html">Home</a></li>
+        <li><a href="../html/catalog.html">Catalog</a></li>
+        <li><a href="../html/about_us.html">About Us</a></li>
+        <li><a href="../html/profile.html">Profile</a></li>
+        <li><a href="../html/redesign.html">Redesign</a></li>
+        <li><a href="../html/explore.html">Explore</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Revive Project. All rights reserved.</p>
+  </div>
+</footer>
+
+    <script src="../js/Redesign.js"></script>
+    <script src="../js/users-data.js"></script>
+    <script src="../js/auth-system.js"></script>
+    <script src="../js/explore.js"></script>
+</body>
+</html>
